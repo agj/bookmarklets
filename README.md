@@ -6,9 +6,7 @@ These are some [bookmarklets](https://en.wikipedia.org/wiki/Bookmarklet) I've wr
 
 Useful for [Elm](https://elm-lang.org/) programmers. Enables (Elm Debug Transformer)[https://github.com/kraklin/elm-debug-transformer] in the current page, which improves the console logging output to make it more readable.
 
-**Bookmarklet:**
-
-- [Elm Debug Transformer][elm-debug-transformer] (version: 1.2.1)
+**Bookmarklet:** [Elm Debug Transformer][elm-debug-transformer] (version: 1.2.1)
 
 The code:
 
