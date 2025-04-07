@@ -26,7 +26,7 @@ import("//unpkg.com/elm-debug-transformer@1.2.1/dist/index.mjs").then(
 
 ## Save URL to Obsidian
 
-A very basic way to help you use Obsidian as your web bookmarks manager. Creates a new note using the current page's title as the note's title, and puts the URL in the body. If you select some text on the page, it will get copied and quoted in the note as well.
+A very basic way to help you use [Obsidian](https://obsidian.md/) as your web bookmarks manager. Creates a new note using the current page's title as the note's title, and puts the URL in the body. If you select some text on the page, it will get copied and quoted in the note as well.
 
 Based on [this](https://forum.obsidian.md/t/bookmarklet-send-to-obsidian/13415). Also, for a more complex/complete solution, [see here](https://stephango.com/obsidian-web-clipper).
 
