@@ -33,13 +33,13 @@ Based on [this](https://forum.obsidian.md/t/bookmarklet-send-to-obsidian/13415).
 Bookmarklet:
 
 ```js
-javascript:(function()%7Bconst%20title%20%3D%20document.title%3B%0Aconst%20url%20%3D%20document.location.href%3B%0Aconst%20selection%20%3D%20window.getSelection().toString().trim()%3B%0Aconst%20quote%20%3D%0A%20%20selection%20!%3D%3D%20%22%22%0A%20%20%20%20%3F%20selection%0A%20%20%20%20%20%20%20%20.split(%22%5Cn%22)%0A%20%20%20%20%20%20%20%20.map((line)%20%3D%3E%20%60%3E%20%24%7Bline%7D%60)%0A%20%20%20%20%20%20%20%20.join(%22%5Cn%22)%0A%20%20%20%20%3A%20%22%22%3B%0A%0Aconst%20content%20%3D%20%60%24%7Burl%7D%0A%0A%24%7Bquote%7D%0A%60%3B%0A%0Adocument.location.href%20%3D%20%60obsidian%3A%2F%2Fnew%3Fname%3D%24%7BencodeURIComponent(title)%7D%26content%3D%24%7BencodeURIComponent(content)%7D%60%3B%7D)()%3B
+javascript:(function()%7Bconst%20title%20%3D%20document.title.replaceAll(%2F%3A%2Fg%2C%20%22%22)%3B%0Aconst%20url%20%3D%20document.location.href%3B%0Aconst%20selection%20%3D%20window.getSelection().toString().trim()%3B%0Aconst%20quote%20%3D%0A%20%20selection%20!%3D%3D%20%22%22%0A%20%20%20%20%3F%20selection%0A%20%20%20%20%20%20%20%20.split(%22%5Cn%22)%0A%20%20%20%20%20%20%20%20.map((line)%20%3D%3E%20%60%3E%20%24%7Bline%7D%60)%0A%20%20%20%20%20%20%20%20.join(%22%5Cn%22)%0A%20%20%20%20%3A%20%22%22%3B%0A%0Aconst%20content%20%3D%20%60%24%7Burl%7D%0A%0A%24%7Bquote%7D%0A%60%3B%0A%0Adocument.location.href%20%3D%20%60obsidian%3A%2F%2Fnew%3Fname%3D%24%7BencodeURIComponent(title)%7D%26content%3D%24%7BencodeURIComponent(content)%7D%60%3B%7D)()%3B
 ```
 
 The code:
 
 ```js
-const title = document.title;
+const title = document.title.replaceAll(/:/g, "");
 const url = document.location.href;
 const selection = window.getSelection().toString().trim();
 const quote =
