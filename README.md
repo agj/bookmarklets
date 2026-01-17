@@ -60,6 +60,8 @@ document.location.href = `obsidian://new?name=${encodeURIComponent(title)}&conte
 
 ## Open Instagram image
 
+Opens the current post's image in the current tab.
+
 Bookmarklet:
 
 ```
