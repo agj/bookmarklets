@@ -57,3 +57,22 @@ ${quote}
 
 document.location.href = `obsidian://new?name=${encodeURIComponent(title)}&content=${encodeURIComponent(content)}`;
 ```
+
+## Open Instagram image
+
+Bookmarklet:
+
+```
+javascript:void%20function(){const%20a=document.querySelector(%22section%20main%20img%22)%3F.getAttribute(%22src%22);a%3Fwindow.location=a:console.error(%22Failed%20to%20get%20image%20URL.%22)}();
+```
+
+The code:
+
+```js
+const url = document.querySelector("section main img")?.getAttribute("src");
+if (url) {
+  window.location = url;
+} else {
+  console.error("Failed to get image URL.");
+}
+```
